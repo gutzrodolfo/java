@@ -20,6 +20,7 @@ public class Fibonacci {
 		iteration(value);
 
 		System.out.print("Fibonacci Series: ");
+		
 		// Prints Fibonacci up to value
 		for (int i = 1; i <= value; i++) {
 			System.out.print(iteration(i) + " "); 
@@ -37,7 +38,9 @@ public class Fibonacci {
 		return iteration(x - 1) + iteration(x - 2); // 
 
 	}
-/*
+
+// Fibonacci sum
+	public static int fibonacci(int x) {
 		// f(n) = f(n-1) + f(n-2)
 		int fib = 0;  // sum of sequence
 		int fib1 = 0; // temp sum of sequence
@@ -50,5 +53,5 @@ public class Fibonacci {
 		// sum = (n-1) + (n-2);
 
 	}
-	*/
+	
 }
