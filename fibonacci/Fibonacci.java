@@ -11,33 +11,44 @@ values up to that term.
 
 public class Fibonacci {
 
-	private static Scanner user_input = new Scanner( System.in );
+	private static Scanner user_input = new Scanner(System.in); 
 
 	public static void main(String[] args) {
 
-		System.out.println("enter an interation:");
+		System.out.print("Enter an interation: ");
 		int value = user_input.nextInt();
-		iteration( value );
+		iteration(value);
+
+		System.out.print("Fibonacci Series: ");
+		// Prints Fibonacci up to value
+		for (int i = 1; i <= value; i++) {
+			System.out.print(iteration(i) + " "); 
+		}
+
 	}
 
-	public static void iteration( int x ) {
+// Keeps count of iteration through Fibonacci series.
+	public static int iteration(int x) {
 
-		// f(n) = (n-1) + (n-2)
-		int sum = 0;  // sum of sequence
-		int sum1 = 0; // temp sum of sequence
-		int n = 3;    // iteration of sequence
+		if (x == 1 || x == 2) {
+			return 1; 
+		}
+
+		return iteration(x - 1) + iteration(x - 2); // 
+
+	}
+/*
+		// f(n) = f(n-1) + f(n-2)
+		int fib = 0;  // sum of sequence
+		int fib1 = 0; // temp sum of sequence
+		int fib2 = 0;    // iteration of sequence
 
 		// while (int n=0; n <= x; n++) 
-		do {
-			sum1 = (n-1) + (n-2); 
-			sum = sum + sum1; 
-			n++;
-
-		} while (n <= x);
 
 		System.out.println("sum of the iteration is: ");
 		System.out.println(sum); 
 		// sum = (n-1) + (n-2);
 
 	}
+	*/
 }
