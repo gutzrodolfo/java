@@ -21,14 +21,14 @@ public class Fibonacci {
 
 		System.out.print("Fibonacci Series: ");
 		
-		// Prints Fibonacci up to value
+// Prints Fibonacci series up to value
 		for (int i = 1; i <= value; i++) {
 			System.out.print(iteration(i) + " "); 
 		}
 
 	}
 
-// Keeps count of iteration through Fibonacci series.
+// Running iteration through Fibonacci series
 	public static int iteration(int x) {
 
 		if (x == 1 || x == 2) {
